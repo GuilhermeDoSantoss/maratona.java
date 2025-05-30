@@ -1,0 +1,31 @@
+package maratona.java.Arrays;
+
+public class Aula08ArraysMultidimensionais02 {
+    public static void main(String[] args) {
+        // São estruturas que armazenam dados em várias dimensões, como tabelas (2D), cubos (3D) e além
+        // É basicamente um array de arrays. Por exemplo, um array bidimensional pode representar uma tabela com linhas e colunas
+
+        int[] array = {1, 2, 3};
+
+        int[][] arrayInt = new int[3][];
+
+        arrayInt[0] = new int[2];
+        arrayInt[1] = array;
+        arrayInt[2] = new int[]{1, 2, 3, 4, 5, 6};
+
+        int[][] arrayInt2 = {{0, 0}, {1, 2, 3}, {1, 2, 3, 4, 5, 6}};
+            for (int[] arrayBase : arrayInt2){
+            for (int num : arrayBase){
+                System.out.println(num + " ");
+            }
+        }
+
+        /*
+        Conceito	          Exemplo
+     Criar array 2D	      int[][] arr = new int[2][3];
+     Acessar valor	      arr[0][1]
+     For aninhado	      for (i) { for (j) { ... }}
+     Inicialização	      {{1, 2}, {3, 4}}
+         */
+    }
+}
